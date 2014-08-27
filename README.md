@@ -5,6 +5,8 @@ Installs/Configures sonarqube
 # Notes
 
 - Set the `node['sonarqube']['os_kernel']` attribute to match your architecture (ie. 32 or 64 bit)
+  - `linux-x86-64` - 64 bit
+  - `linux-x86-32` - 32 bit
 - Does not install Java in case there are specific Java needs on your system
   - add `java::default` to your run list before `sonarqube::default` for a simple installation
 - Does not run `apt::default` on Ubuntu
