@@ -2,7 +2,7 @@
 
 Installs/Configures sonarqube
 
-# Notes
+## Notes
 
 - Set the `node['sonarqube']['os_kernel']` attribute to match your architecture (ie. 32 or 64 bit)
   - `linux-x86-64` - 64 bit
@@ -13,9 +13,9 @@ Installs/Configures sonarqube
   - add `apt::default` to your run list before anything else if you need it (ie. for the Java installation as described in the previous bullet)
 - Does not configure firewall settings, again, in case you have specific needs
 
-# Contributing
+## Contributing
 
-## Prerequisites
+### Prerequisites
 
 - [ChefDK](http://downloads.getchef.com/chef-dk/ "ChefDK")
 - Recent RuboCop
@@ -24,7 +24,7 @@ Installs/Configures sonarqube
   chef gem install rubocop
   ```
 
-## Testing
+### Testing
 
 Test changes using
 
