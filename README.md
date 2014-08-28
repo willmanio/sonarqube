@@ -4,6 +4,7 @@ Installs/Configures sonarqube
 
 ## Notes
 
+- See `test/integration/cookbooks/test` for usage examples
 - Set the `node['sonarqube']['os_kernel']` attribute to match your architecture (ie. 32 or 64 bit)
   - `linux-x86-64` - 64 bit (default)
   - `linux-x86-32` - 32 bit
