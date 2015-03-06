@@ -12,7 +12,7 @@ action :update do
     file.search_file_replace_line(/^#?sonar\.jdbc\.password=/, "sonar.jdbc.password=#{new_resource.password}")
   end
   if original_file.match(/^# Database URL$/).nil?
-    file.search_file_replace_line(/^#----- MySQL.*$\./, '# Database URL')
+    file.search_file_replace_line(/^#----- MySQL.*$/, '# Database URL')
   end
   if original_file.match(/^# Database URL$/).nil?
     file.search_file_replace_line(/^# Comment the following line to deactivate the default embedded database\./, '# Database URL')
