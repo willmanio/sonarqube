@@ -33,3 +33,9 @@ Test changes using
 chef exec rake
 chef exec kitchen verify
 ```
+
+### Publishing
+
+```
+chef exec knife cookbook site share sonarqube "Monitoring & Trending"
+```
