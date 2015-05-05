@@ -64,7 +64,6 @@ default['sonarqube']['log']['profilingLevel'] = 'NONE'
 default['sonarqube']['rails']['dev'] = false
 
 default['sonarqube']['extra_properties'] = [
-  #'example.property=property',
   #'sonar.security.realm=LDAP',
-  #'sonar.security.savePassword=password'
+  #'sonar.security.savePassword=false'
 ]
