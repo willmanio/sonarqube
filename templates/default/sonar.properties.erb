@@ -181,3 +181,7 @@ sonar.log.profilingLevel=<%= node['sonarqube']['log']['profilingLevel'] %>
 
 # Set to true to apply Ruby on Rails code changes on the fly
 sonar.rails.dev=<%= node['sonarqube']['rails']['dev'] %>
+
+<% node['sonarqube']['extra_properties'].each do |p| %>
+<%= p %>
+<% end %>
