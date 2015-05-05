@@ -9,10 +9,6 @@ sonarqube_group = node['sonarqube']['group']
 sonarqube_config_dir = node['sonarqube']['config']['dir']
 sonarqube_config_file =  node['sonarqube']['config']['file']
 
-sonarqube_jdbc_username = node['sonarqube']['jdbc']['username']
-sonarqube_jdbc_password = node['sonarqube']['jdbc']['password']
-sonarqube_jdbc_url = node['sonarqube']['jdbc']['url']
-
 sonarqube_zipfile_destination = ::File.join(Chef::Config[:file_cache_path], "sonarqube-#{sonarqube_version}.zip")
 sonarqube_zipfile_source = "#{sonarqube_mirror}/sonarqube-#{sonarqube_version}.zip"
 sonarqube_runscript = "/opt/sonarqube-#{sonarqube_version}/bin/#{sonarqube_os_kernel}/sonar.sh"
