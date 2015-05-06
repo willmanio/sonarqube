@@ -46,7 +46,7 @@ directory sonarqube_config_dir do
 end
 
 template "#{sonarqube_config_dir}/#{sonarqube_config_file}" do
-  source "sonar.properties.erb"
+  source 'sonar.properties.erb'
   notifies :restart, 'service[sonarqube]', :delayed
   mode 0600
 end

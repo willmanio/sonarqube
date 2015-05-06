@@ -12,7 +12,7 @@ default['sonarqube']['group'] = 'sonarqube'
 default['sonarqube']['web']['host'] = '0.0.0.0'
 default['sonarqube']['web']['context'] = nil
 default['sonarqube']['web']['port'] = 9000
-default['sonarqube']['web']['https']['port'] = -1 #Default value of -1 leaves https disabled
+default['sonarqube']['web']['https']['port'] = -1 # Default value of -1 leaves https disabled
 
 default['sonarqube']['embeddedDatabase']['dataDir'] = nil
 default['sonarqube']['embeddedDatabase']['port'] = 9092
@@ -25,8 +25,8 @@ default['sonarqube']['jdbc']['maxActive'] = 20
 default['sonarqube']['jdbc']['maxIdle'] = 5
 default['sonarqube']['jdbc']['minIdle'] = 2
 default['sonarqube']['jdbc']['maxWait'] = 5000
-default['sonarqube']['jdbc']['minEvictableIdleTimeMillis'] = 600000
-default['sonarqube']['jdbc']['timeBetweenEvictionRunsMillis'] = 30000
+default['sonarqube']['jdbc']['minEvictableIdleTimeMillis'] = 600_000
+default['sonarqube']['jdbc']['timeBetweenEvictionRunsMillis'] = 30_000
 
 default['sonarqube']['web']['https']['keyAlias'] = nil
 default['sonarqube']['web']['https']['keyPass'] = 'changeit'
@@ -64,6 +64,6 @@ default['sonarqube']['log']['profilingLevel'] = 'NONE'
 default['sonarqube']['rails']['dev'] = false
 
 default['sonarqube']['extra_properties'] = [
-  #'sonar.security.realm=LDAP',
-  #'sonar.security.savePassword=false'
+  # 'sonar.security.realm=LDAP',
+  # 'sonar.security.savePassword=false'
 ]
