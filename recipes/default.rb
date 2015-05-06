@@ -6,9 +6,8 @@ sonarqube_os_kernel = node['sonarqube']['os_kernel']
 sonarqube_user = node['sonarqube']['user']
 sonarqube_group = node['sonarqube']['group']
 
-sonarqube_jdbc_username = node['sonarqube']['jdbc']['username']
-sonarqube_jdbc_password = node['sonarqube']['jdbc']['password']
-sonarqube_jdbc_url = node['sonarqube']['jdbc']['url']
+sonarqube_config_dir = node['sonarqube']['config']['dir']
+sonarqube_config_file =  node['sonarqube']['config']['file']
 
 sonarqube_zipfile_destination = ::File.join(Chef::Config[:file_cache_path], "sonarqube-#{sonarqube_version}.zip")
 sonarqube_zipfile_source = "#{sonarqube_mirror}/sonarqube-#{sonarqube_version}.zip"
@@ -39,11 +38,17 @@ bash 'unzip installation' do
   not_if { ::File.exist?(sonarqube_runscript) }
 end
 
-sonarqube_jdbc "/opt/sonarqube-#{sonarqube_version}/conf/sonar.properties" do
-  username sonarqube_jdbc_username
-  password sonarqube_jdbc_password
-  url sonarqube_jdbc_url
+directory sonarqube_config_dir do
+  recursive true
+  mode 0700
+  owner sonarqube_user
+  group sonarqube_group
+end
+
+template "#{sonarqube_config_dir}/#{sonarqube_config_file}" do
+  source 'sonar.properties.erb'
   notifies :restart, 'service[sonarqube]', :delayed
+  mode 0600
 end
 
 link '/usr/bin/sonarqube' do
