@@ -12,5 +12,5 @@ describe service('sonarqube') do
 end
 
 describe process('wrapper') do
-  its(:user) { should eq "sonarqube" }
+  its(:user) { should eq 'sonarqube' }
 end
