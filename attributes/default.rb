@@ -1,6 +1,6 @@
-default['sonarqube']['mirror'] = 'http://dist.sonar.codehaus.org'
-default['sonarqube']['version'] = '4.4'
-default['sonarqube']['checksum'] = 'b257668788655bb5656b8b520e70b8a63a4a37c62a0e350a5145681eebce5ddb'
+default['sonarqube']['mirror'] = 'https://sonarsource.bintray.com/Distribution/sonarqube/'
+default['sonarqube']['version'] = '5.1.2'
+default['sonarqube']['checksum'] = 'a8d63d837242d0d07c0b3f65cfa9c84d5ae82ee51c6cbb52248bcf0d1bc58491'
 default['sonarqube']['os_kernel'] = 'linux-x86-64'
 
 default['sonarqube']['config']['dir'] = "/opt/sonarqube-#{node['sonarqube']['version']}/conf"
