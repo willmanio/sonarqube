@@ -6,7 +6,7 @@ sonarqube_os_kernel = node['sonarqube']['os_kernel']
 sonarqube_user = node['sonarqube']['user']
 sonarqube_group = node['sonarqube']['group']
 
-sonarqube_config_dir = node['sonarqube']['config']['dir'] % {version: sonarqube_version}
+sonarqube_config_dir = node['sonarqube']['config']['dir'] % { version: sonarqube_version }
 sonarqube_config_file =  node['sonarqube']['config']['file']
 
 sonarqube_zipfile_destination = ::File.join(Chef::Config[:file_cache_path], "sonarqube-#{sonarqube_version}.zip")
