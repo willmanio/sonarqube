@@ -27,3 +27,6 @@ suites:
       - recipe[java]
       - recipe[sonarqube]
       - recipe[sonarqube_plugin_consumer]
+    attributes:
+      java:
+        jdk_version: '7'
