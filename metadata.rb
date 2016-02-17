@@ -1,9 +1,12 @@
 name 'sonarqube'
-maintainer 'Peter Halliday'
-maintainer_email 'pghalliday@gmail.com'
-license 'MIT'
-description 'Installs/Configures SonarQube'
-long_description 'Installs/Configures SonarQube'
+description 'Installs/Configures SonarQube Server and SonarQube Scanner'
+long_description 'Installs/Configures SonarQube Server and SonarQube SCanner'
 version '0.3.3'
-supports 'ubuntu'
+
+maintainer 'Christian E Willman'
+maintainer_email 'christian@willman.io'
+
+license 'MIT'
+
 supports 'centos'
+supports 'ubuntu'
