@@ -85,8 +85,7 @@ Browse the `attributes` directory to view advanced attributes.
 ## Notes
 
 - Does not run `apt::default` on Ubuntu
-  - add `apt::default` to your run list before anything else if you need it (ie. for the Java installation as described in the previous bullet)
-- Does not configure firewall settings, again, in case you have specific needs
+  - add `apt::default` to your run list before anything else if you need it (e.g. for the Java installation as described in the previous bullet)
 
 ## Contributing
 
@@ -95,13 +94,13 @@ Browse the `attributes` directory to view advanced attributes.
 - [ChefDK](http://downloads.getchef.com/chef-dk/ "ChefDK")
 - Recent RuboCop
 
-  ```
-  chef gem install rubocop
-  ```
+```
+chef gem install rubocop
+```
 
 ### Testing
 
-Test changes using
+Test changes using:
 
 ```
 chef exec rake
@@ -109,7 +108,12 @@ chef exec kitchen verify
 ```
 
 ### Publishing
-
 ```
 chef exec knife cookbook site share sonarqube "Monitoring & Trending"
 ```
+
+### License
+MIT
+
+### Author
+Christian Willman <github@willman.io>
