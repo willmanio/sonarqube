@@ -112,8 +112,8 @@ chef exec kitchen verify
 chef exec knife cookbook site share sonarqube "Monitoring & Trending"
 ```
 
-### License
-MIT
-
-### Author
+## Author
 Christian Willman <github@willman.io>
+
+## License
+MIT
