@@ -10,7 +10,7 @@ sonarqube_scanner_zipfile_source = "#{sonarqube_scanner_mirror}/sonar-scanner-#{
 
 sonarqube_scanner_root_dir = "/opt/sonar-scanner-#{sonarqube_scanner_version}"
 sonarqube_scanner_bin_dir = "#{sonarqube_scanner_root_dir}/bin"
-sonarqube_scanner_properties_file = "#{sonarqube_scanner_root_dir}/conf/sonar-runner.properties"
+sonarqube_scanner_properties_file = "#{sonarqube_scanner_root_dir}/conf/sonar-scanner.properties"
 sonarqube_scanner_profile_d_file = '/etc/profile.d/sonarqube-scanner.sh'
 
 group sonarqube_group do
@@ -45,7 +45,7 @@ directory sonarqube_scanner_root_dir do
 end
 
 template sonarqube_scanner_properties_file do
-  source 'sonar-runner.properties.erb'
+  source 'sonar-scanner.properties.erb'
   mode 0700
   owner sonarqube_user
   group sonarqube_group
