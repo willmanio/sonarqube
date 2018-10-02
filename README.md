@@ -34,7 +34,7 @@ This LWRP manages SonarQube plugins.
 
 The `:install` action installs a SonarQube plugin to an existing SonarQube Server instance.
 Plugins are retrieved from
-[SonarSource's distribution mirror](https://sonarsource.bintray.com/Distribution/).
+[SonarSource's distribution mirror](https://binaries.sonarsource.com/Distribution/).
 The plugin version __must__ be specifed.
 
 ```ruby
